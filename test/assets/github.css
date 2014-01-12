@@ -123,3 +123,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-chunk {
   color: #aaa
 }
+
+
+.hljs-expression {
+  color: #00B8FF;
+}
+.hljs-variable {
+  color: #EC7B00;
+}
