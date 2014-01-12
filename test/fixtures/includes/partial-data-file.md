@@ -1,11 +1,9 @@
-<article id="md-data-file">
+<article id="partial-data-file">
   <h1 class="title">
     {{title}}
   </h1>
   <p class="description"> {{description}} </p>
 </article>
-
-
 
 ***
 

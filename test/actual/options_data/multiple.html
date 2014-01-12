@@ -5,103 +5,139 @@
     <title>This title is from PAGE YFM (multiple.hbs)</title>
     <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
-    <link rel="stylesheet" href="../../assets/github.css">
+    <link rel="stylesheet" href="../../assets/monokai.css">
+    <style>pre {background-color: #222; border: 1px solid #111; padding-bottom: 0;}</style>
   </head>
   <body>
     <div class="container bs-docs-container">
-      # `explicit` context Should be from `explicit.json`, then the YFM of the page, then the options, then the root.
-      <article id="foo">
-        <div class="title">
-          <h1>This title is from EXPLICIT.json</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from EXPLICIT.json</p>
-      </article>
-      # `page` context Should be from the YFM of the page, then the options, then the root.
-      <article id="foo">
-        <div class="title">
-          <h1>This title is from PAGE YFM (multiple.hbs)</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from PAGE YFM (multiple.hbs)</p>
-      </article>
-      # `this` context Should be from the YFM of the page, then the options, then the root.
-      <article id="foo">
-        <div class="title">
-          <h1>This title is from PAGE YFM (multiple.hbs)</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from PAGE YFM (multiple.hbs)</p>
-      </article>
-      # `data` context Should be from the YFM of the file, `foo`, first; then fallback on `foo.json`, then the page, then the options, then the root.
-      <article id="foo">
-        <div class="title">
-          <h1>Title for md FOO.HBS</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from FOO.json</p>
-      </article>
-      # `foo` context Should be from the YFM of the file, `foo`, first; then fallback on `foo.json`, then the page, then the options, then the root.
-      <article id="foo">
-        <div class="title">
-          <h1>This title is from FOO.json</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from FOO.json</p>
-      </article>
-      # empty context Should be from the YFM of the file, `foo`, first; then fallback on `foo.json`, then the page, then the options, then the root.
-      <article id="foo">
-        <div class="title">
-          <h1>Title for md FOO.HBS</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from FOO.json</p>
-      </article>
-      # `bar` context (block) Should be from the YFM of the file, `foo`, first; then fallback on `foo.json`, then fallback on `bar.json`, then the page, then the options, then the root.
-      <article id="foo">
-        <div class="title">
-          <h1>Title for md FOO.HBS</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from FOO.json</p>
-      </article>
-      # `parent` context (block) Should use the context from the page.
-      <article id="foo">
-        <div class="title">
-          <h1>This title is from PAGE YFM (multiple.hbs)</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from PAGE YFM (multiple.hbs)</p>
-      </article>
-      <article id="foo">
-        <div class="title">
-          <h1>This title is from PAGE YFM (multiple.hbs)</h1>
-          <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
-          <p class="lead">This lead is from PAGE YFM (multiple.hbs)</p>
-          <p class="quux">This property is from PAGE YFM (multiple.hbs)</p>
-        </div>
-        <p class="description">This description is from PAGE YFM (multiple.hbs)</p>
-      </article>
+      
+<h2 id="-explicit-context"><code>explicit</code> context</h2>
+<p>Should be from <code>explicit.json</code>, then the YFM of the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from EXPLICIT.json</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from EXPLICIT.json </p>
+</article>
+
+
+
+<h2 id="-page-context"><code>page</code> context</h2>
+<p>Should be from the YFM of the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+
+<h2 id="-this-context"><code>this</code> context</h2>
+<p>Should be from the YFM of the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+
+<h2 id="-data-context"><code>data</code> context</h2>
+<p>Should be from the YFM of the file, <code>foo</code>, first; then fallback on <code>foo.json</code>, then the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>Title for md FOO.HBS</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from FOO.json </p>
+</article>
+
+
+
+<h2 id="-foo-context"><code>foo</code> context</h2>
+<p>Should be from the YFM of the file, <code>foo</code>, first; then fallback on <code>foo.json</code>, then the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>This title is from FOO.json</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from FOO.json </p>
+</article>
+
+
+
+<h1 id="empty-context">empty context</h1>
+<p>Should be from the YFM of the file, <code>foo</code>, first; then fallback on <code>foo.json</code>, then the page, then the options, then the root.</p>
+<article id="foo">
+  <div class="title">
+    <h1>Title for md FOO.HBS</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from FOO.json </p>
+</article>
+
+
+
+<h2 id="-bar-context-block-"><code>bar</code> context (block)</h2>
+<p>Should be from the YFM of the file, <code>foo</code>, first; then fallback on <code>foo.json</code>, then fallback on <code>bar.json</code>, then the page, then the options, then the root.</p>
+  <article id="foo">
+  <div class="title">
+    <h1>Title for md FOO.HBS</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from FOO.json </p>
+</article>
+
+
+
+<h2 id="-parent-context-block-"><code>parent</code> context (block)</h2>
+<p>Should use the context from the page.</p>
+  <article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+
+
+  <article id="foo">
+  <div class="title">
+    <h1>This title is from PAGE YFM (multiple.hbs)</h1>
+    <h2 class="subtitle"> This subtitle is a custom property in the Assemble options </h2>
+    <p class="lead"> This lead is from PAGE YFM (multiple.hbs) </p>
+    <p class="quux"> This property is from PAGE YFM (multiple.hbs) </p>
+  </div>
+  <p class="description"> This description is from PAGE YFM (multiple.hbs) </p>
+</article>
+
+
+
     </div>
     <script src="../../assets/highlight.pack.js"></script>
-    <script>
-    hljs.initHighlightingOnLoad();
-    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

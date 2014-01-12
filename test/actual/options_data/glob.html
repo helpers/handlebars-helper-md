@@ -5,217 +5,277 @@
     <title>this title is from the options.</title>
     <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
-    <link rel="stylesheet" href="../../assets/github.css">
+    <link rel="stylesheet" href="../../assets/monokai.css">
+    <style>pre {background-color: #222; border: 1px solid #111; padding-bottom: 0;}</style>
   </head>
   <body>
     <div class="container bs-docs-container">
-      <article id="md-data-file">
-        <h1 class="title">
-    This title is from md-DATA-FILE.json
+      <article id="partial-data-file">
+  <h1 class="title">
+    This title is from PARTIAL-DATA-FILE.json
   </h1>
-        <p class="description">This description is from md-DATA-FILE.json</p>
-      </article>
-      <hr>
-      <h2 id="example-html">Example HTML</h2>
-      <blockquote>
-        <p>Below this line is HTML converted from Markdown</p>
-      </blockquote>
-      <h2 id="body-copy">Body Copy</h2>
-      <p>Body copy written as normal, plain text will be wrapped with <code>&lt;p&gt;&lt;/p&gt;</code> tags in the rendered HTML.</p>
-      <p>So this body copy:</p>
-      <pre><code class="lang-markdown">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
+  <p class="description"> This description is from PARTIAL-DATA-FILE.json </p>
+</article>
+
+<hr>
+<h2>
+  <a name="example-html" class="anchor" href="#example-html">
+    <span class="header-link"></span>
+  </a>Example HTML
+</h2><blockquote>
+<p>Below this line is HTML converted from Markdown</p>
+</blockquote>
+<h2>
+  <a name="body-copy" class="anchor" href="#body-copy">
+    <span class="header-link"></span>
+  </a>Body Copy
+</h2><p>Body copy written as normal, plain text will be wrapped with <code>&lt;p&gt;&lt;/p&gt;</code> tags in the rendered HTML.</p>
+<p>So this body copy:</p>
+<pre><code class="lang-markdown"><div class="code-example">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.</div>
 </code></pre>
-      <p>renders to this HTML:</p>
-      <pre><code class="lang-html">&lt;p&gt;Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.&lt;/p&gt;
+<p>renders to this HTML:</p>
+<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></div>
 </code></pre>
-      <h2 id="blockquotes">Blockquotes</h2>
-      <p>For quoting blocks of content from another source within your document.</p>
-      <p>Add <code>&gt;</code> before any text you want to quote.</p>
-      <pre><code class="lang-markdown">Add `&gt;` before any text you want to quote.
+<h2>
+  <a name="blockquotes" class="anchor" href="#blockquotes">
+    <span class="header-link"></span>
+  </a>Blockquotes
+</h2><p>For quoting blocks of content from another source within your document.</p>
+<p>Add <code>&gt;</code> before any text you want to quote.</p>
+<pre><code class="lang-markdown"><div class="code-example">Add <span class="hljs-code">`&gt;`</span> before any text you want to quote.</div>
 </code></pre>
-      <p>Renders to:</p>
-      <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      </blockquote>
-      <p>and this HTML:</p>
-      <pre><code class="lang-html">&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
-&lt;/blockquote&gt;
+<p>Renders to:</p>
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+<p>and this HTML:</p>
+<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></div>
 </code></pre>
-      <p>Blockquotes can also be nested:</p>
-      <pre><code class="lang-markdown">&gt; Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+<p>Blockquotes can also be nested:</p>
+<pre><code class="lang-markdown"><div class="code-example"><span class="hljs-blockquote">&gt; Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.</span>
 Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 &gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
 odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
 &gt;&gt;&gt; Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
-Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</div>
 </code></pre>
-      <p>Renders to:</p>
-      <blockquote>
-        <p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
-        <blockquote>
-          <p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
-          <blockquote>
-            <p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
-          </blockquote>
-        </blockquote>
-      </blockquote>
-      <article id="md-yfm-lodash">
-        <h1 class="title">
+<p>Renders to:</p>
+<blockquote>
+<p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
+<blockquote>
+<p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+<blockquote>
+<p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<article id="partial-yfm-lodash">
+  <h1 class="title">
     Assemble =&gt; Assemble
   </h1>
-        <p class="description">Static site generator for Grunt.js and Yeoman. Assemble makes it dead simple to build modular sites, blogs, gh-pages, components and documentation from reusable templates and data.
-        </p>
-        <p class="description">Static site generator for Grunt.js and Yeoman. Assemble makes it dead simple to build modular sites, blogs, gh-pages, components and documentation from reusable templates and data.
-        </p>
-      </article>
-      <p>Note that the YAML front matter is &quot;borrowing&quot; data from the <code>site</code> object, which is defined in the Grunt config.</p>
-      <p>So in this example, <code>{{title}}</code> will yield the same result as <code>{{site.title}}</code>, and <code>{{description}}</code> will yield the same result as <code>{{site.description}}</code>
-      </p>
-      <hr>
-      <h2 id="example-html">Example HTML</h2>
-      <blockquote>
-        <p>Below this line is HTML converted from Markdown</p>
-      </blockquote>
-      <h2 id="emphasis">Emphasis</h2>
-      <h3 id="bold">Bold</h3>
-      <p>For emphasizing a snippet of text with a heavier font-weight.</p>
-      <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-      <pre><code class="lang-markdown">**rendered as bold text**
+  <p class="description"> Static site generator for Grunt.js and Yeoman. Assemble makes it dead simple to build modular sites, blogs, gh-pages, components and documentation from reusable templates and data.
+ </p>
+  <p class="description"> Static site generator for Grunt.js and Yeoman. Assemble makes it dead simple to build modular sites, blogs, gh-pages, components and documentation from reusable templates and data.
+ </p>
+</article>
+
+<p>Note that the YAML front matter is &quot;borrowing&quot; data from the <code>site</code> object, which is defined in the Grunt config.</p>
+<p>So in this example, <code>{{title}}</code> will yield the same result as <code>{{site.title}}</code>, and <code>{{description}}</code> will
+yield the same result as <code>{{site.description}}</code></p>
+<hr>
+<h2>
+  <a name="example-html" class="anchor" href="#example-html">
+    <span class="header-link"></span>
+  </a>Example HTML
+</h2><blockquote>
+<p>Below this line is HTML converted from Markdown</p>
+</blockquote>
+<h2>
+  <a name="emphasis" class="anchor" href="#emphasis">
+    <span class="header-link"></span>
+  </a>Emphasis
+</h2><h3>
+  <a name="bold" class="anchor" href="#bold">
+    <span class="header-link"></span>
+  </a>Bold
+</h3><p>For emphasizing a snippet of text with a heavier font-weight.</p>
+<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+<pre><code class="lang-markdown"><div class="code-example"><span class="hljs-strong">**rendered as bold text**</span></div>
 </code></pre>
-      <p>and this HTML</p>
-      <pre><code class="lang-html">&lt;strong&gt;rendered as bold text&lt;/strong&gt;
+<p>and this HTML</p>
+<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>rendered as bold text<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span></div>
 </code></pre>
-      <h3 id="italics">Italics</h3>
-      <p>For emphasizing a snippet of text with italics.</p>
-      <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-      <pre><code class="lang-markdown">_rendered as italicized text_
+<h3>
+  <a name="italics" class="anchor" href="#italics">
+    <span class="header-link"></span>
+  </a>Italics
+</h3><p>For emphasizing a snippet of text with italics.</p>
+<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+<pre><code class="lang-markdown"><div class="code-example"><span class="hljs-emphasis">_rendered as italicized text_</span></div>
 </code></pre>
-      <p>and this HTML:</p>
-      <pre><code class="lang-html">&lt;em&gt;rendered as italicized text&lt;/em&gt;
+<p>and this HTML:</p>
+<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>rendered as italicized text<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span></div>
 </code></pre>
-      <article id="md-yfm">
-        <h1 class="title">
-    This title is from the file YFM (md-yfm.hbs)
+
+<article id="partial-yfm">
+  <h1 class="title">
+    This title is from the file YFM (partial-yfm.hbs)
   </h1>
-        <p class="description">this description is from the options.</p>
-      </article>
-      <p>In this example, the context for <code>title</code> should be from the YAML front matter of <code>md-yfm.hbs</code>, but since no <code>description</code> property exists in the YFM of the md, the context for <code>description</code>
-        should come from the inheriting page.</p>
-      <hr>
-      <h2 id="example-html">Example HTML</h2>
-      <blockquote>
-        <p>Below this line is HTML converted from Markdown</p>
-      </blockquote>
-      <h2 id="headings">Headings</h2>
-      <p>Headings from <code>h1</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
-      <pre><code class="lang-markdown"># h1 Heading
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+  <p class="description"> this description is from the options. </p>
+</article>
+
+<p>In this example, the context for <code>title</code> should be from the YAML front matter of <code>partial-yfm.hbs</code>,
+but since no <code>description</code> property exists in the YFM of the markdown file, the context for <code>description</code>
+should come from the inheriting page.</p>
+<hr>
+<h2>
+  <a name="example-html" class="anchor" href="#example-html">
+    <span class="header-link"></span>
+  </a>Example HTML
+</h2><blockquote>
+<p>Below this line is HTML converted from Markdown</p>
+</blockquote>
+<h2>
+  <a name="headings" class="anchor" href="#headings">
+    <span class="header-link"></span>
+  </a>Headings
+</h2><p>Headings from <code>h1</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
+<pre><code class="lang-markdown"><div class="code-example"><span class="hljs-header"># h1 Heading</span>
+<span class="hljs-header">## h2 Heading</span>
+<span class="hljs-header">### h3 Heading</span>
+<span class="hljs-header">#### h4 Heading</span>
+<span class="hljs-header">##### h5 Heading</span>
+<span class="hljs-header">###### h6 Heading</span></div>
 </code></pre>
-      <p>Renders to:</p>
-      <h1 id="h1-heading">h1 Heading</h1>
-      <h2 id="h2-heading">h2 Heading</h2>
-      <h3 id="h3-heading">h3 Heading</h3>
-      <h4 id="h4-heading">h4 Heading</h4>
-      <h5 id="h5-heading">h5 Heading</h5>
-      <h6 id="h6-heading">h6 Heading</h6>
-      <p>HTML:</p>
-      <pre><code class="lang-html">&lt;h1&gt;h1 Heading&lt;/h1&gt;
-&lt;h2&gt;h2 Heading&lt;/h2&gt;
-&lt;h3&gt;h3 Heading&lt;/h3&gt;
-&lt;h4&gt;h4 Heading&lt;/h4&gt;
-&lt;h5&gt;h5 Heading&lt;/h5&gt;
-&lt;h6&gt;h6 Heading&lt;/h6&gt;
+<p>Renders to:</p>
+<h1>
+  <a name="h1-heading" class="anchor" href="#h1-heading">
+    <span class="header-link"></span>
+  </a>h1 Heading
+</h1><h2>
+  <a name="h2-heading" class="anchor" href="#h2-heading">
+    <span class="header-link"></span>
+  </a>h2 Heading
+</h2><h3>
+  <a name="h3-heading" class="anchor" href="#h3-heading">
+    <span class="header-link"></span>
+  </a>h3 Heading
+</h3><h4>
+  <a name="h4-heading" class="anchor" href="#h4-heading">
+    <span class="header-link"></span>
+  </a>h4 Heading
+</h4><h5>
+  <a name="h5-heading" class="anchor" href="#h5-heading">
+    <span class="header-link"></span>
+  </a>h5 Heading
+</h5><h6>
+  <a name="h6-heading" class="anchor" href="#h6-heading">
+    <span class="header-link"></span>
+  </a>h6 Heading
+</h6><p>HTML:</p>
+<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>h1 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>h2 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>h3 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>h4 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>h5 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>h6 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></div>
 </code></pre>
-      <h2 id="tables">Tables</h2>
-      <p>Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.</p>
-      <pre><code class="lang-markdown">| Option | Description |
+<h2>
+  <a name="tables" class="anchor" href="#tables">
+    <span class="header-link"></span>
+  </a>Tables
+</h2><p>Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.</p>
+<pre><code class="lang-markdown"><div class="code-example">| Option | Description |
 | ------ | ----------- |
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| ext    | extension to be used for dest files. |</div>
 </code></pre>
-      <p>Renders to:</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Option</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>data</td>
-            <td>path to data files to supply the data that will be passed into templates.</td>
-          </tr>
-          <tr>
-            <td>engine</td>
-            <td>engine to be used for processing templates. Handlebars is the default.</td>
-          </tr>
-          <tr>
-            <td>ext</td>
-            <td>extension to be used for dest files.</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>And this HTML:</p>
-      <pre><code class="lang-html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Option&lt;/th&gt;
-    &lt;th&gt;Description&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;data&lt;/td&gt;
-    &lt;td&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;engine&lt;/td&gt;
-    &lt;td&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;ext&lt;/td&gt;
-    &lt;td&gt;extension to be used for dest files.&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+<p>Renders to:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td>engine</td>
+<td>engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<p>And this HTML:</p>
+<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Description<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>path to data files to supply the data that will be passed into templates.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>engine<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>engine to be used for processing templates. Handlebars is the default.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>ext<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>extension to be used for dest files.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></div>
 </code></pre>
-      <h3 id="right-aligned-text">Right aligned text</h3>
-      <p>Adding a colon on the right side of the dashes below any heading will right align text for that column.</p>
-      <pre><code class="lang-markdown">| Option | Description |
+<h3>
+  <a name="right-aligned-text" class="anchor" href="#right-aligned-text">
+    <span class="header-link"></span>
+  </a>Right aligned text
+</h3><p>Adding a colon on the right side of the dashes below any heading will right align text for that column.</p>
+<pre><code class="lang-markdown"><div class="code-example">| Option | Description |
 | ------:| -----------:|
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| ext    | extension to be used for dest files. |</div>
 </code></pre>
-      <table>
-        <thead>
-          <tr>
-            <th style="text-align:right">Option</th>
-            <th style="text-align:right">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align:right">data</td>
-            <td style="text-align:right">path to data files to supply the data that will be passed into templates.</td>
-          </tr>
-          <tr>
-            <td style="text-align:right">engine</td>
-            <td style="text-align:right">engine to be used for processing templates. Handlebars is the default.</td>
-          </tr>
-          <tr>
-            <td style="text-align:right">ext</td>
-            <td style="text-align:right">extension to be used for dest files.</td>
-          </tr>
-        </tbody>
-      </table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Option</th>
+<th style="text-align:right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">data</td>
+<td style="text-align:right">path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td style="text-align:right">engine</td>
+<td style="text-align:right">engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td style="text-align:right">ext</td>
+<td style="text-align:right">extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+
     </div>
     <script src="../../assets/highlight.pack.js"></script>
-    <script>
-    hljs.initHighlightingOnLoad();
-    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

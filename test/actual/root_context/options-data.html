@@ -5,58 +5,77 @@
     <title>options-data</title>
     <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
-    <link rel="stylesheet" href="../../assets/github.css">
+    <link rel="stylesheet" href="../../assets/monokai.css">
+    <style>pre {background-color: #222; border: 1px solid #111; padding-bottom: 0;}</style>
   </head>
   <body>
     <div class="container bs-docs-container">
       <article id="options-data">
-        <h1 class="title">
+  <h1 class="title">
     This title is from PAGE YFM (multiple.hbs)
     This title is from FOO.json
   </h1>
-        <p class="description">This description is from FOO.json</p>
-      </article>
-      <hr>
-      <h2 id="example-html">Example HTML</h2>
-      <blockquote>
-        <p>Below this line is HTML converted from Markdown</p>
-      </blockquote>
-      <h2 id="code">Code</h2>
-      <h3 id="inline-code">Inline code</h3>
-      <p>Wrap inline snippets of code with <code>` </code>.</p>
-      <p>For example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as &quot;inline&quot;.</p>
-      <pre><code class="lang-html">For example, `&lt;section&gt;&lt;/section&gt;` should be wrapped as &quot;inline&quot;.
+  <p class="description"> This description is from FOO.json </p>
+</article>
+
+<hr>
+<h2>
+  <a name="example-html" class="anchor" href="#example-html">
+    <span class="header-link"></span>
+  </a>Example HTML
+</h2><blockquote>
+<p>Below this line is HTML converted from Markdown</p>
+</blockquote>
+<h2>
+  <a name="code" class="anchor" href="#code">
+    <span class="header-link"></span>
+  </a>Code
+</h2><h3>
+  <a name="inline-code" class="anchor" href="#inline-code">
+    <span class="header-link"></span>
+  </a>Inline code
+</h3><p>Wrap inline snippets of code with <code>` </code>.</p>
+<p>For example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as &quot;inline&quot;.</p>
+<pre><code class="lang-html"><div class="code-example">For example, `<span class="hljs-tag">&lt;<span class="hljs-title">section</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>` should be wrapped as "inline".</div>
 </code></pre>
-      <h3 id="indented-code">Indented code</h3>
-      <p>Or indent several lines of code by at least four spaces, as in:</p>
-      <pre><code class="lang-js">    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+<h3>
+  <a name="indented-code" class="anchor" href="#indented-code">
+    <span class="header-link"></span>
+  </a>Indented code
+</h3><p>Or indent several lines of code by at least four spaces, as in:</p>
+<pre><code class="lang-js"><div class="code-example">    <span class="hljs-comment">// Some comments</span>
+    line <span class="hljs-number">1</span> of code
+    line <span class="hljs-number">2</span> of code
+    line <span class="hljs-number">3</span> of code</div>
 </code></pre>
-      <pre><code>// Some comments
-line 1 of code
-line 2 of code
-line 3 of code
-</code></pre>
-      <h3 id="block-code-fences-">Block code &quot;fences&quot;</h3>
-      <p>Use &quot;fences&quot; <code>``` </code> to block in multiple lines of code.</p>
-      <pre>
+<pre><code><div class="code-example">// Some comments
+line <span class="hljs-number">1</span> of code
+line <span class="hljs-number">2</span> of code
+line <span class="hljs-number">3</span> of code</div>
+</code></pre><h3>
+  <a name="block-code-quotfencesquot" class="anchor" href="#block-code-quotfencesquot">
+    <span class="header-link"></span>
+  </a>Block code &quot;fences&quot;
+</h3><p>Use &quot;fences&quot;  <code>``` </code> to block in multiple lines of code.</p>
+<pre>
 ``` html
 Sample text here...
 ```
 </pre>
-      <pre><code>Sample text here...
+
+
+<pre><code><div class="code-example">Sample text here...</div>
+</code></pre><p>HTML:</p>
+<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Sample text here...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span></div>
 </code></pre>
-      <p>HTML:</p>
-      <pre><code class="lang-html">&lt;pre&gt;
-  &lt;p&gt;Sample text here...&lt;/p&gt;
-&lt;/pre&gt;
-</code></pre>
-      <h3 id="syntax-highlighting">Syntax highlighting</h3>
-      <p>GFM, or &quot;GitHub Flavored Markdown&quot; also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code &quot;fence&quot;, <code>``` js</code>, and syntax highlighting
-        will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:</p>
-      <pre>
+<h3>
+  <a name="syntax-highlighting" class="anchor" href="#syntax-highlighting">
+    <span class="header-link"></span>
+  </a>Syntax highlighting
+</h3><p>GFM, or &quot;GitHub Flavored Markdown&quot; also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code &quot;fence&quot;, <code>``` js</code>, and syntax highlighting will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:</p>
+<pre>
 ``` javascript
 grunt.initConfig({
   assemble: {
@@ -78,95 +97,117 @@ grunt.initConfig({
 };
 ```
 </pre>
-      <p>Renders to:</p>
-      <pre><code class="lang-javascript">grunt.initConfig({
+
+<p>Renders to:</p>
+<pre><code class="lang-javascript"><div class="code-example">grunt.initConfig({
   assemble: {
     options: {
-      assets: &#39;docs/assets&#39;,
-      data: &#39;src/data/*.{json,yml}&#39;,
-      helpers: &#39;src/custom-helpers.js&#39;,
-      partials: [&#39;src/partials/**/*.{hbs,md}&#39;]
+      assets: <span class="hljs-string">'docs/assets'</span>,
+      data: <span class="hljs-string">'src/data/*.{json,yml}'</span>,
+      helpers: <span class="hljs-string">'src/custom-helpers.js'</span>,
+      partials: [<span class="hljs-string">'src/partials/**/*.{hbs,md}'</span>]
     },
     pages: {
       options: {
-        layout: &#39;default.hbs&#39;
+        layout: <span class="hljs-string">'default.hbs'</span>
       },
       files: {
-        &#39;./&#39;: [&#39;src/templates/pages/index.hbs&#39;]
+        <span class="hljs-string">'./'</span>: [<span class="hljs-string">'src/templates/pages/index.hbs'</span>]
       }
     }
   }
-};
+};</div>
 </code></pre>
-      <p>And this complicated HTML:</p>
-      <pre><code class="lang-xml">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;assemble&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;assets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;docs/assets&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/data/*.{json,yml}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;helpers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/custom-helpers.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;partials&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src/partials/**/*.{hbs,md}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;pages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;default.hbs&#39;&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&#39;./&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src/templates/pages/index.hbs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+<p>And this complicated HTML:</p>
+<pre><code class="lang-xml"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"highlight"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>grunt<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>initConfig<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>({<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>assemble<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>options<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>assets<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'docs/assets'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>,<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>data<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'src/data/*.{json,yml}'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>,<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>helpers<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'src/custom-helpers.js'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>,<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>partials<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>[<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'src/partials/**/*.{hbs,md}'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>]<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>},<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>pages<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>options<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>layout<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'default.hbs'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>},<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>files<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'./'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>[<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'src/templates/pages/index.hbs'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>]<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>};<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></div>
 </code></pre>
-      <article id="options-data">
-        <h1 class="title">
+
+
+
+<article id="options-data">
+  <h1 class="title">
     This title is from PAGE YFM (multiple.hbs)
     This title is from FOO.json
   </h1>
-        <p class="description">This description is from FOO.json</p>
-      </article>
-      <hr>
-      <h2 id="example-html">Example HTML</h2>
-      <blockquote>
-        <p>Below this line is HTML converted from Markdown</p>
-      </blockquote>
-      <h2 id="code">Code</h2>
-      <h3 id="inline-code">Inline code</h3>
-      <p>Wrap inline snippets of code with <code>` </code>.</p>
-      <p>For example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as &quot;inline&quot;.</p>
-      <pre><code class="lang-html">For example, `&lt;section&gt;&lt;/section&gt;` should be wrapped as &quot;inline&quot;.
+  <p class="description"> This description is from FOO.json </p>
+</article>
+
+<hr>
+<h2>
+  <a name="example-html" class="anchor" href="#example-html">
+    <span class="header-link"></span>
+  </a>Example HTML
+</h2><blockquote>
+<p>Below this line is HTML converted from Markdown</p>
+</blockquote>
+<h2>
+  <a name="code" class="anchor" href="#code">
+    <span class="header-link"></span>
+  </a>Code
+</h2><h3>
+  <a name="inline-code" class="anchor" href="#inline-code">
+    <span class="header-link"></span>
+  </a>Inline code
+</h3><p>Wrap inline snippets of code with <code>` </code>.</p>
+<p>For example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as &quot;inline&quot;.</p>
+<pre><code class="lang-html"><div class="code-example">For example, `<span class="hljs-tag">&lt;<span class="hljs-title">section</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>` should be wrapped as "inline".</div>
 </code></pre>
-      <h3 id="indented-code">Indented code</h3>
-      <p>Or indent several lines of code by at least four spaces, as in:</p>
-      <pre><code class="lang-js">    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+<h3>
+  <a name="indented-code" class="anchor" href="#indented-code">
+    <span class="header-link"></span>
+  </a>Indented code
+</h3><p>Or indent several lines of code by at least four spaces, as in:</p>
+<pre><code class="lang-js"><div class="code-example">    <span class="hljs-comment">// Some comments</span>
+    line <span class="hljs-number">1</span> of code
+    line <span class="hljs-number">2</span> of code
+    line <span class="hljs-number">3</span> of code</div>
 </code></pre>
-      <pre><code>// Some comments
-line 1 of code
-line 2 of code
-line 3 of code
-</code></pre>
-      <h3 id="block-code-fences-">Block code &quot;fences&quot;</h3>
-      <p>Use &quot;fences&quot; <code>``` </code> to block in multiple lines of code.</p>
-      <pre>
+<pre><code><div class="code-example">// Some comments
+line <span class="hljs-number">1</span> of code
+line <span class="hljs-number">2</span> of code
+line <span class="hljs-number">3</span> of code</div>
+</code></pre><h3>
+  <a name="block-code-quotfencesquot" class="anchor" href="#block-code-quotfencesquot">
+    <span class="header-link"></span>
+  </a>Block code &quot;fences&quot;
+</h3><p>Use &quot;fences&quot;  <code>``` </code> to block in multiple lines of code.</p>
+<pre>
 ``` html
 Sample text here...
 ```
 </pre>
-      <pre><code>Sample text here...
+
+
+<pre><code><div class="code-example">Sample text here...</div>
+</code></pre><p>HTML:</p>
+<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Sample text here...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span></div>
 </code></pre>
-      <p>HTML:</p>
-      <pre><code class="lang-html">&lt;pre&gt;
-  &lt;p&gt;Sample text here...&lt;/p&gt;
-&lt;/pre&gt;
-</code></pre>
-      <h3 id="syntax-highlighting">Syntax highlighting</h3>
-      <p>GFM, or &quot;GitHub Flavored Markdown&quot; also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code &quot;fence&quot;, <code>``` js</code>, and syntax highlighting
-        will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:</p>
-      <pre>
+<h3>
+  <a name="syntax-highlighting" class="anchor" href="#syntax-highlighting">
+    <span class="header-link"></span>
+  </a>Syntax highlighting
+</h3><p>GFM, or &quot;GitHub Flavored Markdown&quot; also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code &quot;fence&quot;, <code>``` js</code>, and syntax highlighting will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:</p>
+<pre>
 ``` javascript
 grunt.initConfig({
   assemble: {
@@ -188,51 +229,52 @@ grunt.initConfig({
 };
 ```
 </pre>
-      <p>Renders to:</p>
-      <pre><code class="lang-javascript">grunt.initConfig({
+
+<p>Renders to:</p>
+<pre><code class="lang-javascript"><div class="code-example">grunt.initConfig({
   assemble: {
     options: {
-      assets: &#39;docs/assets&#39;,
-      data: &#39;src/data/*.{json,yml}&#39;,
-      helpers: &#39;src/custom-helpers.js&#39;,
-      partials: [&#39;src/partials/**/*.{hbs,md}&#39;]
+      assets: <span class="hljs-string">'docs/assets'</span>,
+      data: <span class="hljs-string">'src/data/*.{json,yml}'</span>,
+      helpers: <span class="hljs-string">'src/custom-helpers.js'</span>,
+      partials: [<span class="hljs-string">'src/partials/**/*.{hbs,md}'</span>]
     },
     pages: {
       options: {
-        layout: &#39;default.hbs&#39;
+        layout: <span class="hljs-string">'default.hbs'</span>
       },
       files: {
-        &#39;./&#39;: [&#39;src/templates/pages/index.hbs&#39;]
+        <span class="hljs-string">'./'</span>: [<span class="hljs-string">'src/templates/pages/index.hbs'</span>]
       }
     }
   }
-};
+};</div>
 </code></pre>
-      <p>And this complicated HTML:</p>
-      <pre><code class="lang-xml">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;assemble&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;assets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;docs/assets&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/data/*.{json,yml}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;helpers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/custom-helpers.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;partials&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src/partials/**/*.{hbs,md}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;pages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;default.hbs&#39;&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&#39;./&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src/templates/pages/index.hbs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+<p>And this complicated HTML:</p>
+<pre><code class="lang-xml"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"highlight"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>grunt<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>initConfig<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>({<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>assemble<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>options<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>assets<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'docs/assets'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>,<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>data<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'src/data/*.{json,yml}'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>,<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>helpers<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'src/custom-helpers.js'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>,<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>partials<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>[<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'src/partials/**/*.{hbs,md}'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>]<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>},<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>pages<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>options<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>layout<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'default.hbs'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>},<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nx"</span>&gt;</span>files<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>{<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'./'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"o"</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>[<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"s1"</span>&gt;</span>'src/templates/pages/index.hbs'<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>]<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p"</span>&gt;</span>};<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></div>
 </code></pre>
+
+
     </div>
     <script src="../../assets/highlight.pack.js"></script>
-    <script>
-    hljs.initHighlightingOnLoad();
-    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

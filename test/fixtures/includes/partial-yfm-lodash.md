@@ -2,7 +2,7 @@
 title: <%= site.title %>
 description: <%= site.description %>
 ---
-<article id="md-yfm-lodash">
+<article id="partial-yfm-lodash">
   <h1 class="title">
     {{title}} => {{site.title}}
   </h1>

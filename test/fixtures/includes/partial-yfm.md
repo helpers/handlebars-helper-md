@@ -1,18 +1,16 @@
 ---
-title: This title is from the file YFM (md-yfm.hbs)
+title: This title is from the file YFM (partial-yfm.hbs)
 ---
-<article id="md-yfm">
+<article id="partial-yfm">
   <h1 class="title">
     {{title}}
   </h1>
   <p class="description"> {{description}} </p>
 </article>
 
-In this example, the context for `title` should be from the YAML front matter of `md-yfm.hbs`,
-but since no `description` property exists in the YFM of the md, the context for `description`
+In this example, the context for `title` should be from the YAML front matter of `partial-yfm.hbs`,
+but since no `description` property exists in the YFM of the markdown file, the context for `description`
 should come from the inheriting page.
-
-
 
 ***
 

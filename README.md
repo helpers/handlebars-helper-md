@@ -1,6 +1,6 @@
 # {{md}} [![NPM version](https://badge.fury.io/js/handlebars-helper-md.png)](http://badge.fury.io/js/handlebars-helper-md) 
 
-> Handlebars helper, alternative to built-in partials. Similar to handlebars-helper-partial, but this helper will allow wildcard (glob) patterns. Like Assemble itself, this helper will automatically determine the correct context to use, or a context may be explicitly passed in as a second parameter.
+> Convert markdown to HTML. Use wildcard (glob) patterns for files. Like Assemble itself, this helper will automatically determine the correct context to use, or a context may be explicitly passed in as a second parameter.
 
 If you find a bug or have a feature request, [please create an issue](https://github.com/helpers/handlebars-helper-md/issues).
 
@@ -47,6 +47,19 @@ With the helper registered, you may now begin using it in your templates:
 {{md 'foo'}}
 ```
 
+### Gruntfile configuration
+
+```js
+assemble: {
+  options: {
+    partials: ['test/fixtures/includes/*.md'],
+  },
+  files: {
+    'dest/': ['src/*.{hbs,md}']
+  }
+}
+```
+
 Optionally pass in a context as the second parameter:
 
 ```html
@@ -61,6 +74,25 @@ Globbing patterns may also be used:
 {{md 'chapter-*' bar}}
 ```
 
+
+#### Set marked.js options in the Gruntfile
+
+```js
+assemble: {
+  options: {
+    // marked.js options
+    marked: {
+      sanitize: true,
+      // see test/fixtures/render/heading.tmpl
+      headings: 'anchors.tmpl'
+    },
+    partials: ['includes/*.md'],
+  },
+  files: {
+    'dest/': ['src/*.{hbs,md}']
+  }
+}
+```
 
 
 ## Context

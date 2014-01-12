@@ -1,7 +1,7 @@
 {
   "name": "handlebars-helper-md",
-  "description": "Handlebars helper, alternative to built-in partials. Similar to handlebars-helper-partial, but this helper will allow wildcard (glob) patterns. Like Assemble itself, this helper will automatically determine the correct context to use, or a context may be explicitly passed in as a second parameter.",
-  "version": "0.1.1",
+  "description": "Convert markdown to HTML. Use wildcard (glob) patterns for files. Like Assemble itself, this helper will automatically determine the correct context to use, or a context may be explicitly passed in as a second parameter.",
+  "version": "0.1.0",
   "homepage": "https://github.com/helpers/handlebars-helper-md",
   "author": {
     "name": "Jon Schlinkert",
@@ -26,7 +26,8 @@
     "highlight.js": "~8.0.0",
     "lodash": "~2.4.0",
     "marked": "~0.3.0",
-    "minimatch": "~0.2.14"
+    "minimatch": "~0.2.14",
+    "underscore.string": "~2.3.3"
   },
   "devDependencies": {
     "assemble": "~0.4.33",
@@ -43,6 +44,8 @@
     "handlebars helper",
     "handlebars",
     "helper",
+    "marked",
+    "markdown",
     "md",
     "partial",
     "view"

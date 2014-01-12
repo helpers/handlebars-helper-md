@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>this title is from the options.</title>
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
+    <link rel="stylesheet" href="../../assets/monokai.css">
+    <style>pre {background-color: #222; border: 1px solid #111; padding-bottom: 0;}</style>
+  </head>
+  <body>
+    <div class="container bs-docs-container">
+      <h3>
+  <a name="code" class="anchor" href="#code">
+    <span class="header-link"></span>
+  </a>Code
+</h3><blockquote>
+<p>Syntax highlighting tests</p>
+</blockquote>
+<pre><code class="lang-handlebars"><div class="code-example"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"options-data"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title"</span>&gt;</span>
+    </span><span class="hljs-expression">{{<span class="hljs-variable">title</span>}}</span><span class="xml">
+    </span><span class="hljs-expression">{{<span class="hljs-variable">foo.title</span>}}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"description"</span>&gt;</span> </span><span class="hljs-expression">{{<span class="hljs-variable">foo.description</span>}}</span><span class="xml"> <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span></span></div>
+</code></pre>
+<pre><code class="lang-hbs"><div class="code-example"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"options-data"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title"</span>&gt;</span>
+    </span><span class="hljs-expression">{{<span class="hljs-variable">title</span>}}</span><span class="xml">
+    </span><span class="hljs-expression">{{<span class="hljs-variable">foo.title</span>}}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"description"</span>&gt;</span> </span><span class="hljs-expression">{{<span class="hljs-variable">foo.description</span>}}</span><span class="xml"> <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span></span></div>
+</code></pre>
+
+    </div>
+    <script src="../../assets/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -4,35 +4,47 @@
  * Licensed under the MIT License (MIT).
  */
 
+'use strict';
+
 // Node.js
+var fs = require('fs');
 var path = require('path');
 
 // node_modules
-var yfm = require('assemble-yaml');
 var minimatch = require('minimatch');
-var marked = require('marked');
+var yfm = require('assemble-yaml');
 var _ = require('lodash');
+// Mix in the methods from underscore string
+_.mixin(require('underscore.string'));
 
+// Marked
+var marked = require('marked');
+var renderer = new marked.Renderer();
+
+// Highlight.js
+var hljs = require('highlight.js');
+
+// Local libs
+var utils = require('./lib/utils');
 
 // Export helpers
 module.exports.register = function (Handlebars, options, params) {
-
-  'use strict';
-
   var assemble = params.assemble;
   var grunt = params.grunt;
   options = options || {};
+  options.marked = options.marked || {};
 
-  // var markedDefaults = {
-  //   renderer: new marked.Renderer(),
-  //   gfm: true,
-  //   tables: true,
-  //   breaks: false,
-  //   pedantic: false,
-  //   sanitize: true,
-  //   smartLists: true,
-  //   smartypants: false
-  // };
+  renderer.heading = function (text, level) {
+    var tmpl = options.marked.headings || utils.fallbackHeadingTmpl;
+    var markup = utils.readFile(tmpl);
+    return _.template(markup, {text: text, level: level});
+  };
+
+  var markedDefaults = {
+    sanitize: false,
+    highlight: utils.highlight,
+    renderer: renderer
+  };
 
   /**
    * {{md}}
@@ -44,11 +56,15 @@ module.exports.register = function (Handlebars, options, params) {
    * @return {String}         Returns compiled HTML
    * @xample: {{md 'foo' bar}}
    */
-  Handlebars.registerHelper('md', function(name, context) {
-    // opts = _.extend({}, markedDefaults, options.marked, options.hash);
+  Handlebars.registerHelper('md', function(name, context, opts) {
+    opts = _.extend({}, markedDefaults, options.marked, options.hash);
 
     // Set marked.js options
-    // marked.setOptions(opts);
+    marked.setOptions(opts);
+
+    if(name.match(/^:/)) {
+      return marked(name.replace(/^:/, ''));
+    }
 
     if(!Array.isArray(assemble.partials)) {
       assemble.partials = [assemble.partials];

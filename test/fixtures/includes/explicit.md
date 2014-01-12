@@ -11,15 +11,15 @@ description: Description for md EXPLICIT.HBS
 
 ***
 
-# Nested Includes
+### Nested Includes
 
 > Following are a number of sections created from nested includes
 
 {{md 'page-yfm' explicit}}
-{{md 'md-yfm' explicit}}
-{{md 'md-data-file' explicit}}
+{{md 'partial-yfm' explicit}}
+{{md 'partial-data-file' explicit}}
 
 
 {{md 'page-yfm'}}
-{{md 'md-yfm'}}
-{{md 'md-data-file'}}
+{{md 'partial-yfm'}}
+{{md 'partial-data-file'}}

@@ -29,14 +29,18 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         flatten: true,
-        subtitle: 'This subtitle is a custom property in the Assemble options',
-
         // Ensure that assets path calculates properly
         assets: 'test/assets',
+        // Add a random custom property to ensure that
+        // it's being merged into the context
+        subtitle: 'This subtitle is a custom property in the Assemble options',
         data: ['test/fixtures/data/*.json'],
-        partials: ['test/fixtures/includes/*.md'],
-        layout: 'test/fixtures/layouts/default.hbs',
         helpers: ['index.js'],
+        marked: {
+          headings: 'test/fixtures/renderer/heading.tmpl'
+        },
+        layout: 'test/fixtures/layouts/default.hbs',
+        partials: ['test/fixtures/includes/*.md'],
       },
       site_data: {
         options: {
@@ -63,6 +67,7 @@ module.exports = function(grunt) {
     },
 
     prettify: {
+      options: {ocd: true},
       tests: {
         files: [
           {expand: true, cwd: 'test/actual', src: ['**/*.html'], dest: 'test/actual', ext: '.html'}
@@ -109,6 +114,6 @@ module.exports = function(grunt) {
   grunt.registerTask('docs', ['repos', 'readme']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'clean', 'assemble', 'prettify', 'readme']);
+  grunt.registerTask('default', ['jshint', 'clean', 'assemble', 'readme']);
 
 };
