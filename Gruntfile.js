@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     site: grunt.file.readYAML('_config.yml'),
 
     jshint: {
-      all: ['Gruntfile.js', 'test/*.js', '*.js', 'tmp/repeat.js'],
+      all: ['Gruntfile.js', 'test/*.js', '*.js', 'lib/*.js'],
       options: {
         jshintrc: '.jshintrc'
       }

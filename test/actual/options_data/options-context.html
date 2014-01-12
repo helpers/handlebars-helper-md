@@ -5,6 +5,7 @@
     <title>this title is from the options.</title>
     <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
+    <link rel="stylesheet" href="../../assets/github.css">
   </head>
   <body>
     <div class="container bs-docs-container">
@@ -247,5 +248,9 @@
       Note that even though we're explicitly defining `page` and `this` as the context, since no data is defined in the page (e.g. YAML front matter) the context will be set to `options.data` since `options.data` is merged into the context directly after page
       data.
     </div>
+    <script src="../../assets/highlight.pack.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>

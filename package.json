@@ -23,9 +23,10 @@
   "main": "./index.js",
   "dependencies": {
     "assemble-yaml": "~0.2.1",
+    "highlight.js": "~8.0.0",
     "lodash": "~2.4.0",
-    "minimatch": "~0.2.14",
-    "marked": "~0.3.0"
+    "marked": "~0.3.0",
+    "minimatch": "~0.2.14"
   },
   "devDependencies": {
     "assemble": "~0.4.33",
@@ -33,9 +34,9 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-mocha-test": "~0.8.1",
+    "grunt-prettify": "~0.3.4",
     "grunt-readme": "~0.4.5",
-    "grunt-repos": "~0.1.2",
-    "grunt-prettify": "~0.3.4"
+    "grunt-repos": "~0.1.2"
   },
   "keywords": [
     "assemble",
