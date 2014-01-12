@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>This title is from the PAGE YFM (explicit-context.hbs)</title>
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
+  </head>
+  <body>
+    <div class="container bs-docs-container">
+      <article id="page-yfm">
+        <h1 class="title">
+    This title is from EXPLICIT.json
+  </h1>
+        <p class="description">This description is from EXPLICIT.json</p>
+      </article>
+      <hr>
+      <h2 id="example-html">Example HTML</h2>
+      <blockquote>
+        <p>Below this line is HTML converted from Markdown</p>
+      </blockquote>
+      <h2 id="links">Links</h2>
+      <h3 id="basic-link">Basic link</h3>
+      <pre><code class="lang-markdown">[Assemble](http://assemble.io)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="http://assemble.io">Assemble</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;http://assemble.io&quot;&gt;Assemble&lt;/a&gt;
+</code></pre>
+      <h3 id="add-a-title">Add a title</h3>
+      <pre><code class="lang-markdown">[Upstage](https://github.com/upstage/ &quot;Visit Upstage!&quot;)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;https://github.com/upstage/&quot; title=&quot;Visit Upstage!&quot;&gt;Upstage&lt;/a&gt;
+</code></pre>
+      <article id="md-yfm">
+        <h1 class="title">
+    This title is from EXPLICIT.json
+  </h1>
+        <p class="description">This description is from EXPLICIT.json</p>
+      </article>
+      <p>In this example, the context for <code>title</code> should be from the YAML front matter of <code>md-yfm.hbs</code>, but since no <code>description</code> property exists in the YFM of the md, the context for <code>description</code>
+        should come from the inheriting page.</p>
+      <hr>
+      <h2 id="example-html">Example HTML</h2>
+      <blockquote>
+        <p>Below this line is HTML converted from Markdown</p>
+      </blockquote>
+      <h2 id="headings">Headings</h2>
+      <p>Headings from <code>h1</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
+      <pre><code class="lang-markdown"># h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+</code></pre>
+      <p>Renders to:</p>
+      <h1 id="h1-heading">h1 Heading</h1>
+      <h2 id="h2-heading">h2 Heading</h2>
+      <h3 id="h3-heading">h3 Heading</h3>
+      <h4 id="h4-heading">h4 Heading</h4>
+      <h5 id="h5-heading">h5 Heading</h5>
+      <h6 id="h6-heading">h6 Heading</h6>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;h1&gt;h1 Heading&lt;/h1&gt;
+&lt;h2&gt;h2 Heading&lt;/h2&gt;
+&lt;h3&gt;h3 Heading&lt;/h3&gt;
+&lt;h4&gt;h4 Heading&lt;/h4&gt;
+&lt;h5&gt;h5 Heading&lt;/h5&gt;
+&lt;h6&gt;h6 Heading&lt;/h6&gt;
+</code></pre>
+      <h2 id="tables">Tables</h2>
+      <p>Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.</p>
+      <pre><code class="lang-markdown">| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+</code></pre>
+      <p>Renders to:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>data</td>
+            <td>path to data files to supply the data that will be passed into templates.</td>
+          </tr>
+          <tr>
+            <td>engine</td>
+            <td>engine to be used for processing templates. Handlebars is the default.</td>
+          </tr>
+          <tr>
+            <td>ext</td>
+            <td>extension to be used for dest files.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>And this HTML:</p>
+      <pre><code class="lang-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Option&lt;/th&gt;
+    &lt;th&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;data&lt;/td&gt;
+    &lt;td&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;engine&lt;/td&gt;
+    &lt;td&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ext&lt;/td&gt;
+    &lt;td&gt;extension to be used for dest files.&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+      <h3 id="right-aligned-text">Right aligned text</h3>
+      <p>Adding a colon on the right side of the dashes below any heading will right align text for that column.</p>
+      <pre><code class="lang-markdown">| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+</code></pre>
+      <table>
+        <thead>
+          <tr>
+            <th style="text-align:right">Option</th>
+            <th style="text-align:right">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:right">data</td>
+            <td style="text-align:right">path to data files to supply the data that will be passed into templates.</td>
+          </tr>
+          <tr>
+            <td style="text-align:right">engine</td>
+            <td style="text-align:right">engine to be used for processing templates. Handlebars is the default.</td>
+          </tr>
+          <tr>
+            <td style="text-align:right">ext</td>
+            <td style="text-align:right">extension to be used for dest files.</td>
+          </tr>
+        </tbody>
+      </table>
+      <article id="md-data-file">
+        <h1 class="title">
+    This title is from EXPLICIT.json
+  </h1>
+        <p class="description">This description is from EXPLICIT.json</p>
+      </article>
+      <hr>
+      <h2 id="example-html">Example HTML</h2>
+      <blockquote>
+        <p>Below this line is HTML converted from Markdown</p>
+      </blockquote>
+      <h2 id="body-copy">Body Copy</h2>
+      <p>Body copy written as normal, plain text will be wrapped with <code>&lt;p&gt;&lt;/p&gt;</code> tags in the rendered HTML.</p>
+      <p>So this body copy:</p>
+      <pre><code class="lang-markdown">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
+</code></pre>
+      <p>renders to this HTML:</p>
+      <pre><code class="lang-html">&lt;p&gt;Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.&lt;/p&gt;
+</code></pre>
+      <h2 id="blockquotes">Blockquotes</h2>
+      <p>For quoting blocks of content from another source within your document.</p>
+      <p>Add <code>&gt;</code> before any text you want to quote.</p>
+      <pre><code class="lang-markdown">Add `&gt;` before any text you want to quote.
+</code></pre>
+      <p>Renders to:</p>
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      </blockquote>
+      <p>and this HTML:</p>
+      <pre><code class="lang-html">&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+      <p>Blockquotes can also be nested:</p>
+      <pre><code class="lang-markdown">&gt; Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
+&gt;&gt;&gt; Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+</code></pre>
+      <p>Renders to:</p>
+      <blockquote>
+        <p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
+        <blockquote>
+          <p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+          <blockquote>
+            <p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+      <article id="explict">
+        <h1 class="title">
+    This title is from EXPLICIT.json
+  </h1>
+        <p class="description">This description is from EXPLICIT.json</p>
+      </article>
+      <hr>
+      <h1 id="nested-includes">Nested Includes</h1>
+      <blockquote>
+        <p>Following are a number of sections created from nested includes</p>
+      </blockquote>
+      <article id="page-yfm">
+        <h1 class="title">
+    This title is from EXPLICIT.json
+  </h1>
+        <p class="description">This description is from EXPLICIT.json</p>
+      </article>
+      <p>
+        <hr>
+      </p>
+      <p>
+        <h2 id="example-html">Example HTML</h2>
+      </p>
+      <p>
+        <blockquote>
+      </p>
+      <p>
+        <p>Below this line is HTML converted from Markdown</p>
+        </blockquote>
+      </p>
+      <p>
+        <h2 id="links">Links</h2>
+      </p>
+      <p>
+        <h3 id="basic-link">Basic link</h3>
+      </p>
+      <pre><code class="lang-markdown">[Assemble](http://assemble.io)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="http://assemble.io">Assemble</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;http://assemble.io&quot;&gt;Assemble&lt;/a&gt;
+</code></pre>
+      <h3 id="add-a-title">Add a title</h3>
+      <pre><code class="lang-markdown">[Upstage](https://github.com/upstage/ &quot;Visit Upstage!&quot;)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;https://github.com/upstage/&quot; title=&quot;Visit Upstage!&quot;&gt;Upstage&lt;/a&gt;
+</code></pre>
+      <article id="page-yfm">
+        <h1 class="title">
+    this title is from the options.
+  </h1>
+        <p class="description">this description is from the options.</p>
+      </article>
+      <p>
+        <hr>
+      </p>
+      <p>
+        <h2 id="example-html">Example HTML</h2>
+      </p>
+      <p>
+        <blockquote>
+      </p>
+      <p>
+        <p>Below this line is HTML converted from Markdown</p>
+        </blockquote>
+      </p>
+      <p>
+        <h2 id="links">Links</h2>
+      </p>
+      <p>
+        <h3 id="basic-link">Basic link</h3>
+      </p>
+      <pre><code class="lang-markdown">[Assemble](http://assemble.io)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="http://assemble.io">Assemble</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;http://assemble.io&quot;&gt;Assemble&lt;/a&gt;
+</code></pre>
+      <h3 id="add-a-title">Add a title</h3>
+      <pre><code class="lang-markdown">[Upstage](https://github.com/upstage/ &quot;Visit Upstage!&quot;)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;https://github.com/upstage/&quot; title=&quot;Visit Upstage!&quot;&gt;Upstage&lt;/a&gt;
+</code></pre>
+      <article id="explict">
+        <h1 class="title">
+    Title for md EXPLICIT.HBS
+  </h1>
+        <p class="description">Description for md EXPLICIT.HBS</p>
+      </article>
+      <hr>
+      <h1 id="nested-includes">Nested Includes</h1>
+      <blockquote>
+        <p>Following are a number of sections created from nested includes</p>
+      </blockquote>
+      <article id="page-yfm">
+        <h1 class="title">
+    This title is from EXPLICIT.json
+  </h1>
+        <p class="description">This description is from EXPLICIT.json</p>
+      </article>
+      <p>
+        <hr>
+      </p>
+      <p>
+        <h2 id="example-html">Example HTML</h2>
+      </p>
+      <p>
+        <blockquote>
+      </p>
+      <p>
+        <p>Below this line is HTML converted from Markdown</p>
+        </blockquote>
+      </p>
+      <p>
+        <h2 id="links">Links</h2>
+      </p>
+      <p>
+        <h3 id="basic-link">Basic link</h3>
+      </p>
+      <pre><code class="lang-markdown">[Assemble](http://assemble.io)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="http://assemble.io">Assemble</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;http://assemble.io&quot;&gt;Assemble&lt;/a&gt;
+</code></pre>
+      <h3 id="add-a-title">Add a title</h3>
+      <pre><code class="lang-markdown">[Upstage](https://github.com/upstage/ &quot;Visit Upstage!&quot;)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;https://github.com/upstage/&quot; title=&quot;Visit Upstage!&quot;&gt;Upstage&lt;/a&gt;
+</code></pre>
+      <article id="page-yfm">
+        <h1 class="title">
+    this title is from the options.
+  </h1>
+        <p class="description">this description is from the options.</p>
+      </article>
+      <p>
+        <hr>
+      </p>
+      <p>
+        <h2 id="example-html">Example HTML</h2>
+      </p>
+      <p>
+        <blockquote>
+      </p>
+      <p>
+        <p>Below this line is HTML converted from Markdown</p>
+        </blockquote>
+      </p>
+      <p>
+        <h2 id="links">Links</h2>
+      </p>
+      <p>
+        <h3 id="basic-link">Basic link</h3>
+      </p>
+      <pre><code class="lang-markdown">[Assemble](http://assemble.io)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="http://assemble.io">Assemble</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;http://assemble.io&quot;&gt;Assemble&lt;/a&gt;
+</code></pre>
+      <h3 id="add-a-title">Add a title</h3>
+      <pre><code class="lang-markdown">[Upstage](https://github.com/upstage/ &quot;Visit Upstage!&quot;)
+</code></pre>
+      <p>Renders to:</p>
+      <p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
+      </p>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;a href=&quot;https://github.com/upstage/&quot; title=&quot;Visit Upstage!&quot;&gt;Upstage&lt;/a&gt;
+</code></pre>
+    </div>
+  </body>
+</html>

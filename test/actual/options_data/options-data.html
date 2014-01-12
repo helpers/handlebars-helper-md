@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>this title is from the options.</title>
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/docs-assets/css/docs.css">
+  </head>
+  <body>
+    <div class="container bs-docs-container">
+      <article id="options-data">
+        <h1 class="title">
+    this title is from the options.
+    This title is from FOO.json
+  </h1>
+        <p class="description">This description is from FOO.json</p>
+      </article>
+      <hr>
+      <h2 id="example-html">Example HTML</h2>
+      <blockquote>
+        <p>Below this line is HTML converted from Markdown</p>
+      </blockquote>
+      <h2 id="code">Code</h2>
+      <h3 id="inline-code">Inline code</h3>
+      <p>Wrap inline snippets of code with <code>` </code>.</p>
+      <p>For example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as &quot;inline&quot;.</p>
+      <pre><code class="lang-html">For example, `&lt;section&gt;&lt;/section&gt;` should be wrapped as &quot;inline&quot;.
+</code></pre>
+      <h3 id="indented-code">Indented code</h3>
+      <p>Or indent several lines of code by at least four spaces, as in:</p>
+      <pre><code class="lang-js">    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+</code></pre>
+      <pre><code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+</code></pre>
+      <h3 id="block-code-fences-">Block code &quot;fences&quot;</h3>
+      <p>Use &quot;fences&quot; <code>``` </code> to block in multiple lines of code.</p>
+      <pre>
+``` html
+Sample text here...
+```
+</pre>
+      <pre><code>Sample text here...
+</code></pre>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;pre&gt;
+  &lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;/pre&gt;
+</code></pre>
+      <h3 id="syntax-highlighting">Syntax highlighting</h3>
+      <p>GFM, or &quot;GitHub Flavored Markdown&quot; also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code &quot;fence&quot;, <code>``` js</code>, and syntax highlighting
+        will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:</p>
+      <pre>
+``` javascript
+grunt.initConfig({
+  assemble: {
+    options: {
+      assets: 'docs/assets',
+      data: 'src/data/*.{json,yml}',
+      helpers: 'src/custom-helpers.js',
+      partials: ['src/partials/**/*.{hbs,md}']
+    },
+    pages: {
+      options: {
+        layout: 'default.hbs'
+      },
+      files: {
+        './': ['src/templates/pages/index.hbs']
+      }
+    }
+  }
+};
+```
+</pre>
+      <p>Renders to:</p>
+      <pre><code class="lang-javascript">grunt.initConfig({
+  assemble: {
+    options: {
+      assets: &#39;docs/assets&#39;,
+      data: &#39;src/data/*.{json,yml}&#39;,
+      helpers: &#39;src/custom-helpers.js&#39;,
+      partials: [&#39;src/partials/**/*.{hbs,md}&#39;]
+    },
+    pages: {
+      options: {
+        layout: &#39;default.hbs&#39;
+      },
+      files: {
+        &#39;./&#39;: [&#39;src/templates/pages/index.hbs&#39;]
+      }
+    }
+  }
+};
+</code></pre>
+      <p>And this complicated HTML:</p>
+      <pre><code class="lang-xml">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;assemble&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;assets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;docs/assets&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/data/*.{json,yml}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;helpers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/custom-helpers.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;partials&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src/partials/**/*.{hbs,md}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;pages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;default.hbs&#39;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&#39;./&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src/templates/pages/index.hbs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</code></pre>
+      <article id="options-data">
+        <h1 class="title">
+    this title is from the options.
+    This title is from FOO.json
+  </h1>
+        <p class="description">This description is from FOO.json</p>
+      </article>
+      <hr>
+      <h2 id="example-html">Example HTML</h2>
+      <blockquote>
+        <p>Below this line is HTML converted from Markdown</p>
+      </blockquote>
+      <h2 id="code">Code</h2>
+      <h3 id="inline-code">Inline code</h3>
+      <p>Wrap inline snippets of code with <code>` </code>.</p>
+      <p>For example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as &quot;inline&quot;.</p>
+      <pre><code class="lang-html">For example, `&lt;section&gt;&lt;/section&gt;` should be wrapped as &quot;inline&quot;.
+</code></pre>
+      <h3 id="indented-code">Indented code</h3>
+      <p>Or indent several lines of code by at least four spaces, as in:</p>
+      <pre><code class="lang-js">    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+</code></pre>
+      <pre><code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+</code></pre>
+      <h3 id="block-code-fences-">Block code &quot;fences&quot;</h3>
+      <p>Use &quot;fences&quot; <code>``` </code> to block in multiple lines of code.</p>
+      <pre>
+``` html
+Sample text here...
+```
+</pre>
+      <pre><code>Sample text here...
+</code></pre>
+      <p>HTML:</p>
+      <pre><code class="lang-html">&lt;pre&gt;
+  &lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;/pre&gt;
+</code></pre>
+      <h3 id="syntax-highlighting">Syntax highlighting</h3>
+      <p>GFM, or &quot;GitHub Flavored Markdown&quot; also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code &quot;fence&quot;, <code>``` js</code>, and syntax highlighting
+        will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:</p>
+      <pre>
+``` javascript
+grunt.initConfig({
+  assemble: {
+    options: {
+      assets: 'docs/assets',
+      data: 'src/data/*.{json,yml}',
+      helpers: 'src/custom-helpers.js',
+      partials: ['src/partials/**/*.{hbs,md}']
+    },
+    pages: {
+      options: {
+        layout: 'default.hbs'
+      },
+      files: {
+        './': ['src/templates/pages/index.hbs']
+      }
+    }
+  }
+};
+```
+</pre>
+      <p>Renders to:</p>
+      <pre><code class="lang-javascript">grunt.initConfig({
+  assemble: {
+    options: {
+      assets: &#39;docs/assets&#39;,
+      data: &#39;src/data/*.{json,yml}&#39;,
+      helpers: &#39;src/custom-helpers.js&#39;,
+      partials: [&#39;src/partials/**/*.{hbs,md}&#39;]
+    },
+    pages: {
+      options: {
+        layout: &#39;default.hbs&#39;
+      },
+      files: {
+        &#39;./&#39;: [&#39;src/templates/pages/index.hbs&#39;]
+      }
+    }
+  }
+};
+</code></pre>
+      <p>And this complicated HTML:</p>
+      <pre><code class="lang-xml">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;assemble&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;assets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;docs/assets&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/data/*.{json,yml}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;helpers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/custom-helpers.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;partials&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src/partials/**/*.{hbs,md}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;pages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;default.hbs&#39;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&#39;./&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src/templates/pages/index.hbs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</code></pre>
+    </div>
+  </body>
+</html>
