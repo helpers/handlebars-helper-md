@@ -102,7 +102,9 @@ module.exports.register = function (Handlebars, options, params) {
       var ctx = _.extend({},
         grunt.config.data, options, this, options.data[name], metadata, context
       );
-      ctx = grunt.config.process(ctx);
+
+      // Process config templates
+      ctx = processContext(grunt, ctx);
 
       var template = Handlebars.partials[name];
       var fn = Handlebars.compile(template);
@@ -120,4 +122,12 @@ module.exports.register = function (Handlebars, options, params) {
 
     return new Handlebars.SafeString(results);
   });
+
+  /**
+   * Process templates using grunt.config.data and context
+   */
+  var processContext = function(grunt, context) {
+    grunt.config.data = _.defaults(context || {}, _.cloneDeep(grunt.config.data));
+    return grunt.config.process(grunt.config.data);
+  };
 };

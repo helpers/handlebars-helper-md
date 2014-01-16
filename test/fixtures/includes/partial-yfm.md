@@ -1,5 +1,5 @@
 ---
-title: This title is from the file YFM (partial-yfm.hbs)
+title: This title is from the partial YFM (partial-yfm.hbs)
 ---
 <article id="partial-yfm">
   <h1 class="title">

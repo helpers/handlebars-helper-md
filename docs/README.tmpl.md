@@ -14,7 +14,7 @@ If you find a bug or have a feature request, [please create an issue](https://gi
 {%= _.doc("context.md") %}
 
 ## Related projects
-Besides the [handlebars-helpers](https://github.com/assemble/handlebars-helpers) library, which mds more than 120 helpers, {%= _.include("related-repos-list.md") %}
+Besides the [handlebars-helpers](https://github.com/assemble/handlebars-helpers) library, which contains more than 120 helpers, {%= _.include("related-repos-list.md") %}
 
 ## Contributing
 {%= _.include("docs-contributing.md") %}
