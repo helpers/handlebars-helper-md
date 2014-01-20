@@ -5,7 +5,18 @@
 If you find a bug or have a feature request, [please create an issue](https://github.com/helpers/handlebars-helper-md/issues).
 
 ## Installation
-Use [npm](npmjs.org) to install the package: `npm i handlebars-helper-md`.
+Install with [npm](npmjs.org):
+
+```
+npm i handlebars-helper-md --save-dev`
+```
+
+Install with [bower](https://github.com/bower/bower):
+
+```
+bower install handlebars-helper-md --save-dev`
+```
+
 
 ### Register the helper
 

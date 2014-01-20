@@ -1,4 +1,15 @@
-Use [npm](npmjs.org) to install the package: `npm i {%= name %}`.
+Install with [npm](npmjs.org):
+
+```
+npm i {%= name %} --save-dev`
+```
+
+Install with [bower](https://github.com/bower/bower):
+
+```
+bower install {%= name %} --save-dev`
+```
+
 
 ## Register the helper
 
