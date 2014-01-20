@@ -22,12 +22,11 @@
   ],
   "main": "./index.js",
   "dependencies": {
-    "assemble-yaml": "~0.2.1",
-    "highlight.js": "~8.0.0",
     "lodash": "~2.4.0",
     "marked": "~0.3.0",
+    "marked-extras": "~0.1.0",
     "minimatch": "~0.2.14",
-    "underscore.string": "~2.3.3"
+    "yfm": "~0.1.0"
   },
   "devDependencies": {
     "assemble": "~0.4.33",
@@ -41,13 +40,22 @@
   },
   "keywords": [
     "assemble",
+    "convert markdown",
+    "gfm markdown",
+    "gfm",
+    "github markdown",
     "handlebars helper",
     "handlebars",
     "helper",
-    "marked",
+    "highlight.js",
+    "markdown headings",
+    "markdown to html",
     "markdown",
+    "marked",
     "md",
     "partial",
-    "view"
+    "include",
+    "glob",
+    "minimatch"
   ]
 }

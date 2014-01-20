@@ -1,60 +1,36 @@
 /**
  * Handlebars Helpers: {{md}}
- * Copyright (c) 2013 Jon Schlinkert
+ * Copyright (c) 2014 Jon Schlinkert
  * Licensed under the MIT License (MIT).
  */
 
 'use strict';
 
 // Node.js
-var fs = require('fs');
-var path = require('path');
+var path      = require('path');
 
 // node_modules
+var marked    = require('marked');
+var extras    = require('marked-extras');
 var minimatch = require('minimatch');
-var yfm = require('assemble-yaml');
-var _ = require('lodash');
-// Mix in the methods from underscore string
-_.mixin(require('underscore.string'));
-
-// Marked
-var marked = require('marked');
-var renderer = new marked.Renderer();
-
-// Highlight.js
-var hljs = require('highlight.js');
-
-// Local libs
-var utils = require('./lib/utils');
+var yfm       = require('yfm');
+var _         = require('lodash');
 
 // Export helpers
 module.exports.register = function (Handlebars, options, params) {
-  var assemble = params.assemble;
-  var grunt = params.grunt;
+
   options = options || {};
   options.marked = options.marked || {};
 
-  renderer.heading = function (text, level) {
-    var tmpl = options.marked.headings || utils.fallbackHeadingTmpl;
-    var markup = utils.readFile(tmpl);
-    return _.template(markup, {text: text, level: level});
-  };
+  extras.init(options.marked);
 
-  var markedDefaults = {
-    sanitize: false,
-    highlight: utils.highlight,
-    renderer: renderer
-  };
+  var assemble = params.assemble;
+  var grunt = params.grunt;
+  var markedDefaults = extras.markedDefaults;
 
   /**
    * {{md}}
-   * Alternative to Assemble's built-in {{md}} helper. See:
-   * https://github.com/assemble/handlebars-helpers/blob/master/lib/helpers/helpers-markdown.js
-   *
-   * @param  {String} name    The name of the file to use
-   * @param  {Object} context The context to pass to the file
-   * @return {String}         Returns compiled HTML
-   * @xample: {{md 'foo' bar}}
+   * Alternative to Assemble's built-in {{md}} helper
    */
   Handlebars.registerHelper('md', function(name, context, opts) {
     opts = _.extend({}, markedDefaults, options.marked, options.hash);
@@ -62,6 +38,7 @@ module.exports.register = function (Handlebars, options, params) {
     // Set marked.js options
     marked.setOptions(opts);
 
+    // Convert inline markdown by prepending the name string with `:`
     if(name.match(/^:/)) {
       return marked(name.replace(/^:/, ''));
     }
@@ -85,7 +62,7 @@ module.exports.register = function (Handlebars, options, params) {
 
       // Process context, using YAML front-matter,
       // grunt config and Assemble options.data
-      var pageObj = yfm.extract(filepath) || {};
+      var pageObj = yfm(filepath) || {};
       var metadata = pageObj.context || {};
 
       // `context`           = the given context (second parameter)

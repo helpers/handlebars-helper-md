@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         data: ['test/fixtures/data/*.json'],
         helpers: ['index.js'],
         marked: {
-          headings: 'test/fixtures/renderer/heading.tmpl'
+          heading: 'assets/heading.tmpl'
         },
         layout: 'test/fixtures/layouts/default.hbs',
         partials: ['test/fixtures/includes/*.md'],
