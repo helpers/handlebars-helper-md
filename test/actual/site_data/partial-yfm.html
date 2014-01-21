@@ -24,66 +24,66 @@ should come from the inheriting page.</p>
 <hr>
 <h2>
   <a name="example-html" class="anchor" href="#example-html">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>Example HTML
 </h2><blockquote>
 <p>Below this line is HTML converted from Markdown</p>
 </blockquote>
 <h2>
   <a name="headings" class="anchor" href="#headings">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>Headings
 </h2><p>Headings from <code>h1</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
-<pre><code class="lang-markdown"><div class="code-example"><span class="hljs-header"># h1 Heading</span>
-<span class="hljs-header">## h2 Heading</span>
-<span class="hljs-header">### h3 Heading</span>
-<span class="hljs-header">#### h4 Heading</span>
-<span class="hljs-header">##### h5 Heading</span>
-<span class="hljs-header">###### h6 Heading</span></div>
+<pre><code class="lang-markdown"><span class="language-header"># h1 Heading</span>
+<span class="language-header">## h2 Heading</span>
+<span class="language-header">### h3 Heading</span>
+<span class="language-header">#### h4 Heading</span>
+<span class="language-header">##### h5 Heading</span>
+<span class="language-header">###### h6 Heading</span>
 </code></pre>
 <p>Renders to:</p>
 <h1>
   <a name="h1-heading" class="anchor" href="#h1-heading">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>h1 Heading
 </h1><h2>
   <a name="h2-heading" class="anchor" href="#h2-heading">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>h2 Heading
 </h2><h3>
   <a name="h3-heading" class="anchor" href="#h3-heading">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>h3 Heading
 </h3><h4>
   <a name="h4-heading" class="anchor" href="#h4-heading">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>h4 Heading
 </h4><h5>
   <a name="h5-heading" class="anchor" href="#h5-heading">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>h5 Heading
 </h5><h6>
   <a name="h6-heading" class="anchor" href="#h6-heading">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>h6 Heading
 </h6><p>HTML:</p>
-<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>h1 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>h2 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>h3 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>h4 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>h5 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>h6 Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></div>
+<pre><code class="lang-html"><span class="language-tag">&lt;<span class="language-title">h1</span>&gt;</span>h1 Heading<span class="language-tag">&lt;/<span class="language-title">h1</span>&gt;</span>
+<span class="language-tag">&lt;<span class="language-title">h2</span>&gt;</span>h2 Heading<span class="language-tag">&lt;/<span class="language-title">h2</span>&gt;</span>
+<span class="language-tag">&lt;<span class="language-title">h3</span>&gt;</span>h3 Heading<span class="language-tag">&lt;/<span class="language-title">h3</span>&gt;</span>
+<span class="language-tag">&lt;<span class="language-title">h4</span>&gt;</span>h4 Heading<span class="language-tag">&lt;/<span class="language-title">h4</span>&gt;</span>
+<span class="language-tag">&lt;<span class="language-title">h5</span>&gt;</span>h5 Heading<span class="language-tag">&lt;/<span class="language-title">h5</span>&gt;</span>
+<span class="language-tag">&lt;<span class="language-title">h6</span>&gt;</span>h6 Heading<span class="language-tag">&lt;/<span class="language-title">h6</span>&gt;</span>
 </code></pre>
 <h2>
   <a name="tables" class="anchor" href="#tables">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>Tables
 </h2><p>Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.</p>
-<pre><code class="lang-markdown"><div class="code-example">| Option | Description |
+<pre><code class="lang-markdown">| Option | Description |
 | ------ | ----------- |
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |</div>
+| ext    | extension to be used for dest files. |
 </code></pre>
 <p>Renders to:</p>
 <table>
@@ -109,35 +109,35 @@ should come from the inheriting page.</p>
 </tbody>
 </table>
 <p>And this HTML:</p>
-<pre><code class="lang-html"><div class="code-example"><span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Description<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>path to data files to supply the data that will be passed into templates.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>engine<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>engine to be used for processing templates. Handlebars is the default.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>ext<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>extension to be used for dest files.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></div>
+<pre><code class="lang-html"><span class="language-tag">&lt;<span class="language-title">table</span>&gt;</span>
+  <span class="language-tag">&lt;<span class="language-title">tr</span>&gt;</span>
+    <span class="language-tag">&lt;<span class="language-title">th</span>&gt;</span>Option<span class="language-tag">&lt;/<span class="language-title">th</span>&gt;</span>
+    <span class="language-tag">&lt;<span class="language-title">th</span>&gt;</span>Description<span class="language-tag">&lt;/<span class="language-title">th</span>&gt;</span>
+  <span class="language-tag">&lt;/<span class="language-title">tr</span>&gt;</span>
+  <span class="language-tag">&lt;<span class="language-title">tr</span>&gt;</span>
+    <span class="language-tag">&lt;<span class="language-title">td</span>&gt;</span>data<span class="language-tag">&lt;/<span class="language-title">td</span>&gt;</span>
+    <span class="language-tag">&lt;<span class="language-title">td</span>&gt;</span>path to data files to supply the data that will be passed into templates.<span class="language-tag">&lt;/<span class="language-title">td</span>&gt;</span>
+  <span class="language-tag">&lt;/<span class="language-title">tr</span>&gt;</span>
+  <span class="language-tag">&lt;<span class="language-title">tr</span>&gt;</span>
+    <span class="language-tag">&lt;<span class="language-title">td</span>&gt;</span>engine<span class="language-tag">&lt;/<span class="language-title">td</span>&gt;</span>
+    <span class="language-tag">&lt;<span class="language-title">td</span>&gt;</span>engine to be used for processing templates. Handlebars is the default.<span class="language-tag">&lt;/<span class="language-title">td</span>&gt;</span>
+  <span class="language-tag">&lt;/<span class="language-title">tr</span>&gt;</span>
+  <span class="language-tag">&lt;<span class="language-title">tr</span>&gt;</span>
+    <span class="language-tag">&lt;<span class="language-title">td</span>&gt;</span>ext<span class="language-tag">&lt;/<span class="language-title">td</span>&gt;</span>
+    <span class="language-tag">&lt;<span class="language-title">td</span>&gt;</span>extension to be used for dest files.<span class="language-tag">&lt;/<span class="language-title">td</span>&gt;</span>
+  <span class="language-tag">&lt;/<span class="language-title">tr</span>&gt;</span>
+<span class="language-tag">&lt;/<span class="language-title">table</span>&gt;</span>
 </code></pre>
 <h3>
   <a name="right-aligned-text" class="anchor" href="#right-aligned-text">
-    <span class="header-link"></span>
+    <span class="heading-link"></span>
   </a>Right aligned text
 </h3><p>Adding a colon on the right side of the dashes below any heading will right align text for that column.</p>
-<pre><code class="lang-markdown"><div class="code-example">| Option | Description |
+<pre><code class="lang-markdown">| Option | Description |
 | ------:| -----------:|
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |</div>
+| ext    | extension to be used for dest files. |
 </code></pre>
 <table>
 <thead>
