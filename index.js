@@ -13,6 +13,7 @@ var path      = require('path');
 var marked    = require('marked');
 var extras    = require('marked-extras');
 var minimatch = require('minimatch');
+var file      = require('fs-utils');
 var yfm       = require('yfm');
 var _         = require('lodash');
 
@@ -33,7 +34,11 @@ module.exports.register = function (Handlebars, options, params) {
    * Alternative to Assemble's built-in {{md}} helper
    */
   Handlebars.registerHelper('md', function(name, context, opts) {
-    opts = _.extend({}, markedDefaults, options.marked, options.hash || {});
+    opts = _.extend({sep: '\n'}, markedDefaults, options.marked, options.hash || {});
+
+    var i = 0;
+    var result = '';
+    var data;
 
     // Set marked.js options
     marked.setOptions(opts);
@@ -57,13 +62,35 @@ module.exports.register = function (Handlebars, options, params) {
       filepaths = assemble.partials.filter(minimatch.filter(name));
     }
 
-    var results = filepaths.map(function(filepath) {
+    /**
+     * Accepts two objects (a, b),
+     * @param  {Object} a
+     * @param  {Object} b
+     * @return {Number} returns 1 if (a >= b), otherwise -1
+     */
+    var compareFn = function (a, b) {
+      var opts = _.extend({sortOrder: 'asc', sortBy: 'index'}, options);
+
+      a = a.data[opts.sortBy];
+      b = b.data[opts.sortBy];
+
+      var result = 0;
+      result = a > b ? 1 : a < b ? -1 : 0;
+      if(opts.sortOrder.toLowerCase() === 'desc') {
+        return result * -1;
+      }
+      return result;
+    };
+
+
+    var src = filepaths.map(function(filepath) {
+      i += 1;
       name = path.basename(filepath, path.extname(filepath));
 
       // Process context, using YAML front-matter,
       // grunt config and Assemble options.data
-      var pageObj = yfm(filepath) || {};
-      var metadata = pageObj.context || {};
+      var page = yfm(filepath) || {};
+      var metadata = page.context || {};
 
       // `context`           = the given context (second parameter)
       // `metadata`          = YAML front matter of the markdown file
@@ -83,21 +110,35 @@ module.exports.register = function (Handlebars, options, params) {
       // Process config templates
       ctx = processContext(grunt, ctx);
 
+      data = Handlebars.createFrame(ctx.data);
+      data.filepath  = filepath;
+
       var template = Handlebars.partials[name];
       var fn = Handlebars.compile(template);
+      var output = fn(ctx);
 
-      var output = fn(ctx).replace(/^\s+/, '');
-
-      // Prepend output with the filepath to the original file
+      // Prepend any content in the given partial to the output
       var md = options.md || options.data.md || {};
+      var append = '';
       if(md.origin === true) {
-        output = '<!-- ' + filepath + ' -->\n' + output;
+        append = Handlebars.compile(Handlebars.partials[md.source_template])(ctx, {data: data});
       }
 
-      return marked(output);
-    }).join('\n');
+      return {
+        data: data,
+        append: append,
+        content: marked(output)
+      };
+    }).sort(options.compare || compareFn).map(function (obj) {
+      if(options.debug) {file.writeDataSync(options.debug, obj);}
 
-    return new Handlebars.SafeString(results);
+      // Return content from src files
+      return obj.content + obj.append;
+    }).join(options.sep);
+
+    result += src;
+
+    return new Handlebars.SafeString(result);
   });
 
   /**

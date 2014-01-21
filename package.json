@@ -1,7 +1,7 @@
 {
   "name": "handlebars-helper-md",
   "description": "Convert markdown to HTML. Use wildcard (glob) patterns for files. Like Assemble itself, this helper will automatically determine the correct context to use, or a context may be explicitly passed in as a second parameter.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/helpers/handlebars-helper-md",
   "author": {
     "name": "Jon Schlinkert",
@@ -26,7 +26,8 @@
     "marked": "~0.3.0",
     "marked-extras": "~0.1.4",
     "minimatch": "~0.2.14",
-    "yfm": "~0.1.0"
+    "yfm": "~0.1.0",
+    "fs-utils": "~0.1.9"
   },
   "devDependencies": {
     "assemble": "~0.4.33",
