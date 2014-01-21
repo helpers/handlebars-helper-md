@@ -33,7 +33,7 @@ module.exports.register = function (Handlebars, options, params) {
    * Alternative to Assemble's built-in {{md}} helper
    */
   Handlebars.registerHelper('md', function(name, context, opts) {
-    opts = _.extend({}, markedDefaults, options.marked, options.hash);
+    opts = _.extend({}, markedDefaults, options.marked, options.hash || {});
 
     // Set marked.js options
     marked.setOptions(opts);
