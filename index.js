@@ -12,9 +12,9 @@ var path      = require('path');
 // node_modules
 var marked    = require('marked');
 var extras    = require('marked-extras');
+var matter    = require('gray-matter');
 var minimatch = require('minimatch');
 var file      = require('fs-utils');
-var yfm       = require('yfm');
 var _         = require('lodash');
 
 // Export helpers
@@ -89,7 +89,7 @@ module.exports.register = function (Handlebars, options, params) {
 
       // Process context, using YAML front-matter,
       // grunt config and Assemble options.data
-      var page = yfm(filepath) || {};
+      var page = matter.read(filepath) || {};
       var metadata = page.context || {};
 
       // `context`           = the given context (second parameter)
