@@ -117,15 +117,21 @@ module.exports.register = function (Handlebars, options, params) {
       var fn = Handlebars.compile(template);
       var output = fn(ctx);
 
-      // Prepend any content in the given partial to the output
+      // Prepend or append any content in the given partial to the output
       var md = options.md || options.data.md || {};
       var append = '';
-      if(md.origin === true) {
-        append = Handlebars.compile(Handlebars.partials[md.source_template])(ctx, {data: data});
+      var prepend = '';
+
+      if(md.prepend) {
+        prepend = Handlebars.compile(Handlebars.partials[md.prepend])(ctx, {data: data});
+      }
+      if(md.append) {
+        append = Handlebars.compile(Handlebars.partials[md.append])(ctx, {data: data});
       }
 
       return {
         data: data,
+        prepend: prepend,
         append: append,
         content: marked(output)
       };
@@ -133,7 +139,7 @@ module.exports.register = function (Handlebars, options, params) {
       if(options.debug) {file.writeDataSync(options.debug, obj);}
 
       // Return content from src files
-      return obj.content + obj.append;
+      return obj.prepend + obj.content + obj.append;
     }).join(options.sep);
 
     result += src;
